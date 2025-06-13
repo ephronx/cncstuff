@@ -1,0 +1,41 @@
+%
+O0001 (THREADMILL MACRO - METRIC VERSION)
+
+(#24=0)     (X POSITION - CENTER)
+(#25=0)     (Y POSITION - CENTER)
+(#19=2.5)   (Z END POSITION - FINAL DEPTH)
+(#26=0.0)   (Z START POSITION - TOP OF THREAD)
+(#9=300)    (FEEDRATE IN MM/MIN)
+(#7=6.5)    (TOOL DIAMETER IN MM)
+(#13=12.5)  (MAJOR DIAMETER OF THREAD IN MM)
+(#11=1.5)   (THREAD PITCH IN MM)
+(#23=5.0)   (SAFE Z HEIGHT)
+
+#1 = [[#13 - #7] / 2]   (CALCULATE THREAD RADIUS)
+#2 = #26               (INITIALIZE CURRENT Z)
+
+G21                    (SET UNITS TO METRIC)
+G17 G90 G0 X#24 Y#25   (MOVE TO CENTER)
+G0 Z#23                (RAPID TO SAFE HEIGHT)
+G0 Z#26                (RAPID TO START DEPTH)
+
+G91                   (INCREMENTAL MODE)
+
+G3 X[#1/2] Y[#1/2] Z[#11/8] R[#1/2] F#9  (ARC IN)
+   X-[#1/2] Y[#1/2] Z[#11/8] R[#1/2]
+
+WHILE [[#2 + #11] LE #19] DO1
+    X-#1 Y-#1 Z[#11/4] R#1
+    X#1 Y-#1 Z[#11/4] R#1
+    X#1 Y#1 Z[#11/4] R#1
+    X-#1 Y#1 Z[#11/4] R#1
+    #2 = #2 + #11
+END1
+
+G3 X-[#1/2] Y-[#1/2] Z[#11/8] R[#1/2]   (ARC OUT)
+   X[#1/2] Y-[#1/2] Z[#11/8] R[#1/2]
+
+G90 G0 Z#23            (RETRACT TO SAFE HEIGHT)
+
+M99
+%
