@@ -1,3 +1,17 @@
+105def get_user_input():
+    print("Enter parameters for face milling operation:")
+    
+    length = float(input("Length of the stock in mm: "))
+    width = float(input("Width of the stock in mm: "))
+    depth_of_cut = float(input("Depth of cut in mm: "))
+    tool_diameter = float(input("Diameter of the milling tool in mm: "))
+    stepover = float(input("Stepover in mm: "))
+    multiple_depths = int(input("Number of depth passes: "))
+    feed_rate = float(input("Feed rate in mm/min: "))
+    filename = input("Enter the filename to save G-code (e.g., face_milling.tap): ")
+    
+    return length, width, depth_of_cut, tool_diameter, stepover, multiple_depths, feed_rate, filename
+
 
 def generate_gcode(length, width, depth_of_cut, tool_diameter, stepover, multiple_depths, feed_rate):
     # Calculate the number of passes needed
@@ -46,21 +60,27 @@ def generate_gcode(length, width, depth_of_cut, tool_diameter, stepover, multipl
     
     return gcode
 
-# Fill in Parameters for face milling operation
-# length of stock, width of stock, depth of cut, tool diameter, stepover, and number of depths passes * depth of cut e.g. 5 passes of 1mm each = 5mm deep
-length = 1055  # Length of the stock in mm
-width = 250 # Width of the stock in mm
-depth_of_cut = 1 # Depth of cut in mm
-tool_diameter = 50 # Diameter of the milling tool in mm
-stepover = 15 # Stepover in mm
-multiple_depths = 2 # Number of depth passes (e.g., 5 passes of 1mm each = 5mm deep)
-feed_rate = 1000  # Feed rate in mm/min
+# # Fill in Parameters for face milling operation
+# # length of stock, width of stock, depth of cut, tool diameter, stepover, and number of depths passes * depth of cut e.g. 5 passes of 1mm each = 5mm deep
+# length = 1055  # Length of the stock in mm
+# width = 250 # Width of the stock in mm
+# depth_of_cut = 1 # Depth of cut in mm
+# tool_diameter = 50 # Diameter of the milling tool in mm
+# stepover = 15 # Stepover in mm
+# multiple_depths = 2 # Number of depth passes (e.g., 5 passes of 1mm each = 5mm deep)
+# feed_rate = 1000  # Feed rate in mm/min
+          
+def main():
+    length, width, depth_of_cut, tool_diameter, stepover, multiple_depths, feed_rate, filename = get_user_input()
+    
+    gcode = generate_gcode(length, width, depth_of_cut, tool_diameter, stepover, multiple_depths, feed_rate)
+    
+    with open(filename, "w") as f:
+        for line in gcode:
+            f.write(line + "\n")
+    
+    print(f"G-code file '{filename}' has been generated.")
 
-gcode = generate_gcode(length, width, depth_of_cut, tool_diameter, stepover, multiple_depths, feed_rate)
+# Run the program
+main()
 
-# Save G-code to file
-with open("face_milling.tap", "w") as f:
-    for line in gcode:
-        f.write(line + "\n")
-
-print("G-code file 'face_milling.tap' has been generated.")
