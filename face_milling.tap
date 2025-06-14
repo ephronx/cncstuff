@@ -1,114 +1,115 @@
 G21 ; Set units to mm
 G17 ; Select XY plane
+T1 M6
 G90 ; Absolute positioning
 G0 Z5 ; Move to safe Z height
 M3 S6000 ; Start spindle at 6000 RPM
-G1 X-15.00 Y-15.00 F500 ; Move to starting position of first row 0
+G1 X-15.00 Y-15.00 F1000 ; Move to starting position of first row 0
 G1 Z-1.00 F100 ; Plunge to depth
-G1 X1070.00 Y-15.00 F500 ; Move to end of row -15
-G1 X1070.00 Y20.00 F500 ; Move across to next row
-G1 X-15.00 Y20.00 F500 ; Move to start of row 20
-G1 X-15.00 Y55.00 F500 ; Move across to next row
-G1 X1070.00 Y55.00 F500 ; Move to end of row 55
-G1 X1070.00 Y90.00 F500 ; Move across to next row
-G1 X-15.00 Y90.00 F500 ; Move to start of row 90
-G1 X-15.00 Y125.00 F500 ; Move across to next row
-G1 X1070.00 Y125.00 F500 ; Move to end of row 125
-G1 X1070.00 Y160.00 F500 ; Move across to next row
-G1 X-15.00 Y160.00 F500 ; Move to start of row 160
-G1 X-15.00 Y195.00 F500 ; Move across to next row
-G1 X1070.00 Y195.00 F500 ; Move to end of row 195
-G1 X1070.00 Y230.00 F500 ; Move across to next row
-G1 X-15.00 Y230.00 F500 ; Move to start of row 230
-G1 X-15.00 Y265.00 F500 ; Move across to next row
-G1 X1070.00 Y265.00 F500 ; Move to end of row 265
-G1 X1070.00 Y300.00 F500 ; Move across to next row
+G1 X1070.00 Y-15.00 F1000 ; Move to end of row -15
+G1 X1070.00 Y20.00 F1000 ; Move across to next row
+G1 X-15.00 Y20.00 F1000; Move to start of row 20
+G1 X-15.00 Y55.00 F1000 ; Move across to next row
+G1 X1070.00 Y55.00 F1000 ; Move to end of row 55
+G1 X1070.00 Y90.00 F1000 ; Move across to next row
+G1 X-15.00 Y90.00 F1000; Move to start of row 90
+G1 X-15.00 Y125.00 F1000 ; Move across to next row
+G1 X1070.00 Y125.00 F1000 ; Move to end of row 125
+G1 X1070.00 Y160.00 F1000 ; Move across to next row
+G1 X-15.00 Y160.00 F1000; Move to start of row 160
+G1 X-15.00 Y195.00 F1000 ; Move across to next row
+G1 X1070.00 Y195.00 F1000 ; Move to end of row 195
+G1 X1070.00 Y230.00 F1000 ; Move across to next row
+G1 X-15.00 Y230.00 F1000; Move to start of row 230
+G1 X-15.00 Y265.00 F1000 ; Move across to next row
+G1 X1070.00 Y265.00 F1000 ; Move to end of row 265
+G1 X1070.00 Y300.00 F1000 ; Move across to next row
 G0 Z5 ; Move to safe Z height
-G1 X-15.00 Y-15.00 F500 ; Move to starting position of first row 0
+G1 X-15.00 Y-15.00 F1000 ; Move to starting position of first row 0
 G1 Z-2.00 F100 ; Plunge to depth
-G1 X1070.00 Y-15.00 F500 ; Move to end of row -15
-G1 X1070.00 Y20.00 F500 ; Move across to next row
-G1 X-15.00 Y20.00 F500 ; Move to start of row 20
-G1 X-15.00 Y55.00 F500 ; Move across to next row
-G1 X1070.00 Y55.00 F500 ; Move to end of row 55
-G1 X1070.00 Y90.00 F500 ; Move across to next row
-G1 X-15.00 Y90.00 F500 ; Move to start of row 90
-G1 X-15.00 Y125.00 F500 ; Move across to next row
-G1 X1070.00 Y125.00 F500 ; Move to end of row 125
-G1 X1070.00 Y160.00 F500 ; Move across to next row
-G1 X-15.00 Y160.00 F500 ; Move to start of row 160
-G1 X-15.00 Y195.00 F500 ; Move across to next row
-G1 X1070.00 Y195.00 F500 ; Move to end of row 195
-G1 X1070.00 Y230.00 F500 ; Move across to next row
-G1 X-15.00 Y230.00 F500 ; Move to start of row 230
-G1 X-15.00 Y265.00 F500 ; Move across to next row
-G1 X1070.00 Y265.00 F500 ; Move to end of row 265
-G1 X1070.00 Y300.00 F500 ; Move across to next row
+G1 X1070.00 Y-15.00 F1000 ; Move to end of row -15
+G1 X1070.00 Y20.00 F1000 ; Move across to next row
+G1 X-15.00 Y20.00 F1000; Move to start of row 20
+G1 X-15.00 Y55.00 F1000 ; Move across to next row
+G1 X1070.00 Y55.00 F1000 ; Move to end of row 55
+G1 X1070.00 Y90.00 F1000 ; Move across to next row
+G1 X-15.00 Y90.00 F1000; Move to start of row 90
+G1 X-15.00 Y125.00 F1000 ; Move across to next row
+G1 X1070.00 Y125.00 F1000 ; Move to end of row 125
+G1 X1070.00 Y160.00 F1000 ; Move across to next row
+G1 X-15.00 Y160.00 F1000; Move to start of row 160
+G1 X-15.00 Y195.00 F1000 ; Move across to next row
+G1 X1070.00 Y195.00 F1000 ; Move to end of row 195
+G1 X1070.00 Y230.00 F1000 ; Move across to next row
+G1 X-15.00 Y230.00 F1000; Move to start of row 230
+G1 X-15.00 Y265.00 F1000 ; Move across to next row
+G1 X1070.00 Y265.00 F1000 ; Move to end of row 265
+G1 X1070.00 Y300.00 F1000 ; Move across to next row
 G0 Z5 ; Move to safe Z height
-G1 X-15.00 Y-15.00 F500 ; Move to starting position of first row 0
+G1 X-15.00 Y-15.00 F1000 ; Move to starting position of first row 0
 G1 Z-3.00 F100 ; Plunge to depth
-G1 X1070.00 Y-15.00 F500 ; Move to end of row -15
-G1 X1070.00 Y20.00 F500 ; Move across to next row
-G1 X-15.00 Y20.00 F500 ; Move to start of row 20
-G1 X-15.00 Y55.00 F500 ; Move across to next row
-G1 X1070.00 Y55.00 F500 ; Move to end of row 55
-G1 X1070.00 Y90.00 F500 ; Move across to next row
-G1 X-15.00 Y90.00 F500 ; Move to start of row 90
-G1 X-15.00 Y125.00 F500 ; Move across to next row
-G1 X1070.00 Y125.00 F500 ; Move to end of row 125
-G1 X1070.00 Y160.00 F500 ; Move across to next row
-G1 X-15.00 Y160.00 F500 ; Move to start of row 160
-G1 X-15.00 Y195.00 F500 ; Move across to next row
-G1 X1070.00 Y195.00 F500 ; Move to end of row 195
-G1 X1070.00 Y230.00 F500 ; Move across to next row
-G1 X-15.00 Y230.00 F500 ; Move to start of row 230
-G1 X-15.00 Y265.00 F500 ; Move across to next row
-G1 X1070.00 Y265.00 F500 ; Move to end of row 265
-G1 X1070.00 Y300.00 F500 ; Move across to next row
+G1 X1070.00 Y-15.00 F1000 ; Move to end of row -15
+G1 X1070.00 Y20.00 F1000 ; Move across to next row
+G1 X-15.00 Y20.00 F1000; Move to start of row 20
+G1 X-15.00 Y55.00 F1000 ; Move across to next row
+G1 X1070.00 Y55.00 F1000 ; Move to end of row 55
+G1 X1070.00 Y90.00 F1000 ; Move across to next row
+G1 X-15.00 Y90.00 F1000; Move to start of row 90
+G1 X-15.00 Y125.00 F1000 ; Move across to next row
+G1 X1070.00 Y125.00 F1000 ; Move to end of row 125
+G1 X1070.00 Y160.00 F1000 ; Move across to next row
+G1 X-15.00 Y160.00 F1000; Move to start of row 160
+G1 X-15.00 Y195.00 F1000 ; Move across to next row
+G1 X1070.00 Y195.00 F1000 ; Move to end of row 195
+G1 X1070.00 Y230.00 F1000 ; Move across to next row
+G1 X-15.00 Y230.00 F1000; Move to start of row 230
+G1 X-15.00 Y265.00 F1000 ; Move across to next row
+G1 X1070.00 Y265.00 F1000 ; Move to end of row 265
+G1 X1070.00 Y300.00 F1000 ; Move across to next row
 G0 Z5 ; Move to safe Z height
-G1 X-15.00 Y-15.00 F500 ; Move to starting position of first row 0
+G1 X-15.00 Y-15.00 F1000 ; Move to starting position of first row 0
 G1 Z-4.00 F100 ; Plunge to depth
-G1 X1070.00 Y-15.00 F500 ; Move to end of row -15
-G1 X1070.00 Y20.00 F500 ; Move across to next row
-G1 X-15.00 Y20.00 F500 ; Move to start of row 20
-G1 X-15.00 Y55.00 F500 ; Move across to next row
-G1 X1070.00 Y55.00 F500 ; Move to end of row 55
-G1 X1070.00 Y90.00 F500 ; Move across to next row
-G1 X-15.00 Y90.00 F500 ; Move to start of row 90
-G1 X-15.00 Y125.00 F500 ; Move across to next row
-G1 X1070.00 Y125.00 F500 ; Move to end of row 125
-G1 X1070.00 Y160.00 F500 ; Move across to next row
-G1 X-15.00 Y160.00 F500 ; Move to start of row 160
-G1 X-15.00 Y195.00 F500 ; Move across to next row
-G1 X1070.00 Y195.00 F500 ; Move to end of row 195
-G1 X1070.00 Y230.00 F500 ; Move across to next row
-G1 X-15.00 Y230.00 F500 ; Move to start of row 230
-G1 X-15.00 Y265.00 F500 ; Move across to next row
-G1 X1070.00 Y265.00 F500 ; Move to end of row 265
-G1 X1070.00 Y300.00 F500 ; Move across to next row
+G1 X1070.00 Y-15.00 F1000 ; Move to end of row -15
+G1 X1070.00 Y20.00 F1000 ; Move across to next row
+G1 X-15.00 Y20.00 F1000; Move to start of row 20
+G1 X-15.00 Y55.00 F1000 ; Move across to next row
+G1 X1070.00 Y55.00 F1000 ; Move to end of row 55
+G1 X1070.00 Y90.00 F1000 ; Move across to next row
+G1 X-15.00 Y90.00 F1000; Move to start of row 90
+G1 X-15.00 Y125.00 F1000 ; Move across to next row
+G1 X1070.00 Y125.00 F1000 ; Move to end of row 125
+G1 X1070.00 Y160.00 F1000 ; Move across to next row
+G1 X-15.00 Y160.00 F1000; Move to start of row 160
+G1 X-15.00 Y195.00 F1000 ; Move across to next row
+G1 X1070.00 Y195.00 F1000 ; Move to end of row 195
+G1 X1070.00 Y230.00 F1000 ; Move across to next row
+G1 X-15.00 Y230.00 F1000; Move to start of row 230
+G1 X-15.00 Y265.00 F1000 ; Move across to next row
+G1 X1070.00 Y265.00 F1000 ; Move to end of row 265
+G1 X1070.00 Y300.00 F1000 ; Move across to next row
 G0 Z5 ; Move to safe Z height
-G1 X-15.00 Y-15.00 F500 ; Move to starting position of first row 0
+G1 X-15.00 Y-15.00 F1000 ; Move to starting position of first row 0
 G1 Z-5.00 F100 ; Plunge to depth
-G1 X1070.00 Y-15.00 F500 ; Move to end of row -15
-G1 X1070.00 Y20.00 F500 ; Move across to next row
-G1 X-15.00 Y20.00 F500 ; Move to start of row 20
-G1 X-15.00 Y55.00 F500 ; Move across to next row
-G1 X1070.00 Y55.00 F500 ; Move to end of row 55
-G1 X1070.00 Y90.00 F500 ; Move across to next row
-G1 X-15.00 Y90.00 F500 ; Move to start of row 90
-G1 X-15.00 Y125.00 F500 ; Move across to next row
-G1 X1070.00 Y125.00 F500 ; Move to end of row 125
-G1 X1070.00 Y160.00 F500 ; Move across to next row
-G1 X-15.00 Y160.00 F500 ; Move to start of row 160
-G1 X-15.00 Y195.00 F500 ; Move across to next row
-G1 X1070.00 Y195.00 F500 ; Move to end of row 195
-G1 X1070.00 Y230.00 F500 ; Move across to next row
-G1 X-15.00 Y230.00 F500 ; Move to start of row 230
-G1 X-15.00 Y265.00 F500 ; Move across to next row
-G1 X1070.00 Y265.00 F500 ; Move to end of row 265
-G1 X1070.00 Y300.00 F500 ; Move across to next row
+G1 X1070.00 Y-15.00 F1000 ; Move to end of row -15
+G1 X1070.00 Y20.00 F1000 ; Move across to next row
+G1 X-15.00 Y20.00 F1000; Move to start of row 20
+G1 X-15.00 Y55.00 F1000 ; Move across to next row
+G1 X1070.00 Y55.00 F1000 ; Move to end of row 55
+G1 X1070.00 Y90.00 F1000 ; Move across to next row
+G1 X-15.00 Y90.00 F1000; Move to start of row 90
+G1 X-15.00 Y125.00 F1000 ; Move across to next row
+G1 X1070.00 Y125.00 F1000 ; Move to end of row 125
+G1 X1070.00 Y160.00 F1000 ; Move across to next row
+G1 X-15.00 Y160.00 F1000; Move to start of row 160
+G1 X-15.00 Y195.00 F1000 ; Move across to next row
+G1 X1070.00 Y195.00 F1000 ; Move to end of row 195
+G1 X1070.00 Y230.00 F1000 ; Move across to next row
+G1 X-15.00 Y230.00 F1000; Move to start of row 230
+G1 X-15.00 Y265.00 F1000 ; Move across to next row
+G1 X1070.00 Y265.00 F1000 ; Move to end of row 265
+G1 X1070.00 Y300.00 F1000 ; Move across to next row
 G0 Z5 ; Move to safe Z height
 G0 Z15 ; Move to safe Z height
-G0 X0 Y0 ; Move to home position
+G0 X0 Y0 F1000; Move to home position
 M5 ; Stop spindle
 M30 ; End of program
